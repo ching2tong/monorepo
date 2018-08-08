@@ -1,0 +1,2 @@
+# monorepo
+Angular Project
