@@ -1,5 +1,4 @@
 [build]
-  base = 'packages/site'
-  command = "npm run build:prod"
-  publish = "dist"
+  command = "npm run bootstrap && cd packages/site && npm run build:prod"
+  publish = "packages/site/dist"
 
