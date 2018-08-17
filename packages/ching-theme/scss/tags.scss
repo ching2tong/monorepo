@@ -1,0 +1,5 @@
+@import "scss/colors";
+
+.tag:not(body).is-info {
+  background-color: $tagColor;
+}

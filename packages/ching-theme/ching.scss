@@ -1,0 +1,18 @@
+@import "~bulma/sass/utilities/initial-variables";
+@import "~bulma/sass/utilities/functions";
+@import "~bulma/sass/utilities/derived-variables.sass";
+
+/* Initial cariables */
+@import "scss/colors";
+@import "scss/code";
+
+@import "scss/forms";
+
+// fixes warnings: https://github.com/jgthms/bulma/issues/1190
+$variable-columns: false;
+@import "~bulma";
+
+/* Site-specific variables */
+@import "scss/markdown";
+@import "scss/overrides";
+@import "scss/typography";

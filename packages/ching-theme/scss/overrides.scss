@@ -1,0 +1,84 @@
+body {
+  font-variant-ligatures: common-ligatures;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6 {
+  line-height: 1.25;
+  font-weight: 400;
+}
+
+img.img-circular {
+  border-radius: 500rem;
+  height: auto;
+  font-size: 1rem;
+}
+
+.icon {
+  width: auto;
+  height: auto;
+}
+
+span .icon {
+  width: auto;
+  height: auto;
+}
+
+.notification {
+  color: $grey-dark;
+  box-shadow: 0 0 0 1px $grey-lighter inset, 0 0 0 0 transparent;
+  padding: 1em 1.5em;
+  font-size: 90%;
+
+  i.icon {
+    margin-right: .6em;
+  }
+
+  .content {
+    align-items: center;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    border-bottom: none;
+    font-weight: 400;
+  }
+
+  .header {
+    font-size: 1.1rem;
+    display: block;
+    font-weight: 700;
+    margin: -.14285714em 0 0 0;
+  }
+
+  .icon:first-child {
+    float: left;
+  }
+
+  a:not(.button) {
+    color: $link;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
+.figure-legend {
+  list-style: none;
+}
+
+@import "scss/notifications";
+@import "scss/forms";
+@import "scss/tags";
+@import "scss/cards";
+@import "scss/states";
+@import "scss/font-awesome";

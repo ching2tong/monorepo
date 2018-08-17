@@ -1,0 +1,101 @@
+@import "scss/colors";
+@import "scss/states";
+
+.icon .notification {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  box-align: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+
+  :not(.close) {
+    display: block;
+    box-flex: 0;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: auto;
+    line-height: 1;
+    font-size: 3em;
+    opacity: .8;
+  }
+}
+
+.notification {
+  border-radius: 0.28571429rem;
+
+  code, pre {
+    background-color: rgba(0, 0, 0, 0.04);
+  }
+
+  .header {
+    font-weight: 700;
+    margin: -.14285714em 0 0 0;
+  }
+
+  .content {
+    vertical-align: middle;
+  }
+
+  i.icon {
+    width: auto;
+    height: auto;
+  }
+}
+
+.notification.floating {
+  box-shadow: 0 0 0 1px rgba(34,36,38,.22) inset,
+              0 2px 4px 0 rgba(34,36,38,.12),
+              0 2px 10px 0 rgba(34,36,38,.15)
+}
+
+.notification h1,
+.notification h2,
+.notification h3,
+.notification h4,
+.notification h5 {
+  color: $grey;
+}
+
+.notification.is-success {
+  background-color: $successBackgroundColor;
+  box-shadow: 0 0 0 1px $successBorderColor inset, 0 0 0 0 transparent;
+  color: $successTextColor;
+
+  .header {
+    color: $successHeaderColor;
+  }
+}
+
+.notification.is-warning {
+  background-color: $warningBackgroundColor;
+  box-shadow: 0 0 0 1px $warningBorderColor inset, 0 0 0 0 transparent;
+  color: $warningTextColor;
+
+  .header {
+    color: $warningHeaderColor;
+  }
+}
+
+.notification.is-info {
+  background-color: $infoBackgroundColor;
+  box-shadow: 0 0 0 1px $infoBorderColor inset, 0 0 0 0 transparent;
+  color: $infoTextColor;
+
+  .header {
+    color: $infoHeaderColor;
+  }
+}
+
+.notification.is-error {
+  background-color: $errorBackgroundColor;
+  box-shadow: 0 0 0 1px $errorBorderColor inset, 0 0 0 0 transparent;
+  color: $errorTextColor;
+
+  .header {
+    color: $errorHeaderColor;
+  }
+}

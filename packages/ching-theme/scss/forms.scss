@@ -1,0 +1,64 @@
+$input-focus: #85b7d9;
+
+$input-shadow: 0 0 0 0 transparent inset !default;
+$input-focus-box-shadow-size: 0 0 0 0 !default;
+
+$input-focus-border-color: $input-focus !default;
+$input-focus-box-shadow-size: 0 0 0 0 transparent inset !default;
+
+.input {
+  ::placeholder {
+    &:focus,
+    &.is-focused,
+    &:active,
+    &.is-active {
+      color: #fff;
+    }
+  }
+}
+
+form .field > label {
+  text-align: left;
+}
+
+// .input:focus,
+// .input.is-focused,
+// .input:active,
+// .input.is-active,
+// .textarea:focus,
+// .textarea.is-focused,
+// .textarea:active,
+// .textarea.is-active {
+//   border-color: #85b7d9;
+//   box-shadow: 0 0 0 0 transparent inset;
+// }
+
+// .input, .textarea {
+//   border: 1px solid rgba(34,36,38,.15);
+//   box-shadow: 0 0 0 0 transparent inset;
+
+//   &:hover {
+//     &::-moz-placeholder,
+//     &::-webkit-input-placeholder,
+//     &::-ms-input-placeholder {
+//       color: #fff;
+//     }
+//   }
+// }
+
+// .form input:not([type]):focus,
+// .form input[type=date]:focus,
+// .form input[type=datetime-local]:focus,
+// .form input[type=email]:focus,
+// .form input[type=file]:focus,
+// .form input[type=number]:focus,
+// .form input[type=password]:focus,
+// .form input[type=search]:focus,
+// .form input[type=tel]:focus,
+// .form input[type=text]:focus,
+// .form input[type=time]:focus,
+// .form input[type=url]:focus {
+//   transition: color .1s ease,border-color .1s ease;
+//   border-color: #85b7d9;
+//   box-shadow: 0 0 0 0 transparent inset;
+// }

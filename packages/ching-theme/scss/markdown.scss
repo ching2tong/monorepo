@@ -1,0 +1,287 @@
+@import "~bulma/sass/utilities/mixins";
+
+.content blockquote {
+  margin-bottom: 1em;
+  padding-bottom: 0 !important;
+  padding-top: 0 !important;
+  padding-left: calc(1rem - 1px) !important;
+  border-left: 4px solid hsla(0, 0%, 0%, 0.13) !important;
+  background-color: transparent !important;
+}
+
+.markdown-body.content img {
+  margin: 1em 0;
+}
+
+a:hover,
+a:active {
+  text-decoration: underline;
+}
+
+.article {
+  margin: 3rem auto;
+
+  @include mobile {
+    width: 85%;
+  }
+
+  @include tablet {
+    max-width: 700px;
+  }
+}
+
+.anchor {
+  float: left;
+  padding-right: 4px;
+  margin-left: -20px;
+
+  svg {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+h1 .anchor svg,
+h2 .anchor svg,
+h3 .anchor svg,
+h4 .anchor svg,
+h5 .anchor svg,
+h6 .anchor svg {
+  visibility: hidden;
+}
+
+h1:hover .anchor svg,
+h2:hover .anchor svg,
+h3:hover .anchor svg,
+h4:hover .anchor svg,
+h5:hover .anchor svg,
+h6:hover .anchor svg {
+  visibility: visible;
+}
+
+.markdown-body {
+  h1 {
+    padding-bottom: 0.15em;
+    font-size: 3rem;
+    margin-bottom: 16px;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  h4 {
+    font-size: 1.5rem;
+  }
+
+  h5 {
+    font-size: 1.25rem;
+  }
+
+  h6 {
+    font-size: 1rem;
+  }
+
+  h2, h3, h4, h5, h6 {
+    margin-top: 24px;
+    margin-bottom: 16px;
+    line-height: 1.25
+  }
+
+  p {
+    font-size: 95%;
+    margin: 0 0 1em;
+  }
+
+  ul li p {
+    margin: auto;
+  }
+
+  blockquote {
+    padding: 0 1em;
+    color: #6a737d;
+    border-left: 0.25em solid  rgba(0,135,202, 0.3);
+    margin: 1.2em 40px;
+
+    p {
+      font-weight: 300 !important;
+      color: #7B7B7B;
+      font-size: 100%;
+    }
+  }
+}
+
+/* Markdown */
+.markdown-body .highlight pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  line-height: 1.45;
+  background-color: rgba(0, 0, 0, 0.01);
+  border-radius: 0.28571429rem;
+}
+
+.markdown-body code::before,
+.markdown-body code::after,
+.markdown-body tt::before,
+.markdown-body tt::after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+.markdown-body code,
+.markdown-body tt {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  background-color: $code-background;
+  border-radius: 3px;
+}
+
+/* Code */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #393a34;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  font-size: 0.9em;
+  line-height: 1em;
+
+  /* Tab Size */
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+
+  /* Hyphens */
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+
+  ::before,
+  ::after {
+    letter-spacing: normal !important;
+    content: normal !important;
+  }
+}
+
+pre[class*="language-"]::-moz-selection,
+pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection,
+code[class*="language-"] ::-moz-selection {
+  background: #b3d4fc;
+}
+
+pre[class*="language-"]::selection,
+pre[class*="language-"] ::selection,
+code[class*="language-"]::selection,
+code[class*="language-"] ::selection {
+  background: #b3d4fc;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: 1em;
+  margin: 0.5em 0;
+  overflow: auto;
+  border: 1px solid #ddd;
+  border-radius: 0.3em;
+  background-color: ad;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+  letter-spacing: normal;
+  content: normal;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: 0.2em;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  background: rgba(0,0,0,0.04);
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #998;
+  font-style: italic;
+}
+
+.token.namespace {
+  opacity: 0.7;
+}
+
+.token.string,
+.token.attr-value {
+  color: #e3116c;
+}
+
+.token.punctuation,
+.token.operator {
+  color: #393a34; /* no highlight */
+}
+
+.token.entity,
+.token.url,
+.token.symbol,
+.token.number,
+.token.boolean,
+.token.variable,
+.token.constant,
+.token.property,
+.token.regex,
+.token.inserted {
+  color: #36acaa;
+}
+
+.token.atrule,
+.token.keyword,
+.token.attr-name,
+.language-autohotkey .token.selector {
+  color: #00a4db;
+}
+
+.token.function,
+.token.deleted,
+.language-autohotkey .token.tag {
+  color: #9a050f;
+}
+
+.token.tag,
+.token.selector,
+.language-autohotkey .token.keyword {
+  color: #00009f;
+}
+
+.token.important,
+.token.function,
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+tt,
+code,
+pre {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
