@@ -2,3 +2,6 @@
   command = "npm run bootstrap && cd packages/site && npm run build:prod"
   publish = "packages/site/dist"
 
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
