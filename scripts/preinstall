@@ -1,4 +1,5 @@
 #!/bin/bash
 
+pwd
 npm install lerna@^3.0.6
 npm run clean
