@@ -25,7 +25,7 @@
     "zone.js": "^0.8.26"
   },
   "scripts": {
-    "bootstrap": "lerna bootstrap --hoist; lerna bootstrap",
+    "bootstrap": "lerna bootstrap",
     "clean": "lerna clean -y"
   }
 }
