@@ -1,5 +1,6 @@
 #!/bin/bash
 
-pwd
-npm install lerna@^3.0.6
-npm run clean
+for pkg in $(ls packages); do
+  rm -rf node_modules/$pkg
+done
+
