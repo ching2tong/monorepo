@@ -2,20 +2,25 @@
 
 var fs = require('fs');
 var path = require('path');
+var exec = require('child_process').exec;
 
 var packageDir = path.join(__dirname, '..', 'packages');
 
 function rimraf(dir_path) {
-  if (fs.existsSync(dir_path)) {
-      fs.readdirSync(dir_path).forEach(function(entry) {
-          var entry_path = path.join(dir_path, entry);
-          if (fs.lstatSync(entry_path).isDirectory()) {
-              rimraf(entry_path);
-          } else {
-              fs.unlinkSync(entry_path);
-          }
-      });
-      fs.rmdirSync(dir_path);
+  if (process.platform === "win32") {
+    exec("rmdir /s ${dir_path}", function(err, stdout, stderr) {
+      if (err) {
+        console.log(err);
+      }
+      console.log(stdout);
+    });
+  } else {
+    exec("rm -rf ${dir_path}", function(err, stdout, stderr) {
+      if (err) {
+        console.log(err);
+      }
+      console.log(stdout);
+    });
   }
 }
 
