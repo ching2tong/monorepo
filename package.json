@@ -25,7 +25,7 @@
     "zone.js": "^0.8.26"
   },
   "scripts": {
-    "preinstall": "./scripts/preinstall",
+    "preinstall": "node ./scripts/preinstall",
     "bootstrap": "lerna bootstrap",
     "clean": "lerna clean -y"
   }
