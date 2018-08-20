@@ -1,5 +1,5 @@
 [build]
-  command = "npm install && npm run clean && npm run bootstrap && cd packages/site && npm run build:prod"
+  command = "npm install && npm run bootstrap && cd packages/site && npm run build:prod"
   publish = "packages/site/dist"
 
 [[redirects]]
