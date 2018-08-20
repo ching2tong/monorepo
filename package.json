@@ -25,6 +25,6 @@
     "zone.js": "^0.8.26"
   },
   "scripts": {
-    "bootstrap": "lerna bootstrap && lerna bootstrap --hoist"
+    "bootstrap": "lerna bootstrap --hoist && lerna bootstrap"
   }
 }
