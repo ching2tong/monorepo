@@ -8,7 +8,11 @@ var packageDir = path.join(__dirname, '..', 'packages');
 
 function rimraf(dir_path) {
   if (process.platform === "win32") {
-    exec(`rmdir /s ${dir_path}`, function(err, stdout, stderr) {
+    if (!fs.existsSync(dir_path)) {
+      return;
+    }
+
+    exec(`rmdir /s /q ${dir_path}`, function(err, stdout, stderr) {
       if (err) {
         console.log(err);
       }
